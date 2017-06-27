@@ -3,7 +3,7 @@ package HWLesson3;
 /**
  * Created by arina on 27.06.17.
  */
-public class Number {
+public class NumberUnit {
 
     public static String toBinaty(int x, int y) {
         String result = "";
