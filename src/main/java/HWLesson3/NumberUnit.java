@@ -5,7 +5,7 @@ package HWLesson3;
  */
 public class NumberUnit {
 
-    public static String toBinaty(int x, int y) {
+    public static String toBinaty(int x, int y) { //x - число, y - основание, перевод  в 2,8,16 систему из 10-й
         String result = "";
         String ost;
 

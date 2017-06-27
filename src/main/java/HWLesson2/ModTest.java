@@ -10,8 +10,8 @@ public class ModTest {
         System.out.println(SimpleUnit.assertEquals(ModUnit.mod(1100,1000), 100));
         System.out.println(SimpleUnit.assertEquals(ModUnit.mod(Integer.MAX_VALUE,2), 1));
         System.out.println(SimpleUnit.assertEquals(ModUnit.mod(-10,2), 0));
-        System.out.println(SimpleUnit.assertEquals(ModUnit.mod(-10,-5), 0));
-        System.out.println(SimpleUnit.assertEquals(ModUnit.mod(-36,-7), 1));
+        System.out.println(SimpleUnit.assertEquals(ModUnit.mod(-10,5), 0));
+        System.out.println(SimpleUnit.assertEquals(ModUnit.mod(-36,7), -1));
         System.out.println();
 
         System.out.println(SimpleUnit.assertNOEquals(ModUnit.mod(-36,-7), 0));

@@ -11,6 +11,6 @@ public class ModUnit {
         while (sum < a && (a - sum >= b)){
             sum = sum + b;
         }
-        return (a - sum);
+        return i > 0 ?(a - sum): -(a - sum);
     }
 }
