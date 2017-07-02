@@ -9,9 +9,9 @@ public class GeneratCode {
 
         static final byte[] ALPHABET = {'A', 'C', 'T', 'G'};
 
-        public static byte[] generate(){
+        public static byte[] generate(int size){
 
-            byte[] code = new byte[30];
+            byte[] code = new byte[size];
             Random random = new Random();
 
             for (int i = 0; i < code.length ; i++) {
@@ -23,8 +23,8 @@ public class GeneratCode {
             return code;
         }
 
-//    public static void main(String[] args) {
-//        generate();
-//    }
+    public static void main(String[] args) {
+        generate(30);
+    }
 
 }

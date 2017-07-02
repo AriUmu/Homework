@@ -30,12 +30,36 @@ public class CodingBarWarmup2 {
         return num;
     }
 
+    public static boolean array123(int[] nums) {
+        boolean one = false;
+        boolean two = false;
+        boolean tree = false;
+        for (int i = 0; i < nums.length; i++) {
+            switch (nums[i]) {
+                case 1: one = true;
+                    break;
+                case 2: two = true;
+                    break;
+                case 3: tree = true;
+                    break;
+            }
+
+        }
+        return one&&two&&tree;
+
+    }
+
+
 
 
     public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6,7};
+
         System.out.println(stringTimes("Hi", 5));
         System.out.println(doubleX("axxaa"));
         System.out.println(last2("tratata"));
+        array123(arr);
+        
 
     }
 }

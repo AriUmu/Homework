@@ -33,8 +33,9 @@ public class Genome {
 
     public static void main(String[] args) {
 
-        byte[] code = GeneratCode.generate();
+        byte[] code = GeneratCode.generate(30);
 
         rework(code, 3);
+
     }
 }
