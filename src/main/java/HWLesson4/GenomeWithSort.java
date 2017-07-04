@@ -11,7 +11,7 @@ import java.util.List;
 public class GenomeWithSort { //дз - доделать с помощью hashCode + CodingBat на логику и побитовые опрации
 
     private static final int GENOME_SIZE = 30;
-    private static final int WORD_SIZE = 3;
+    private static final int WORD_SIZE = 2;
 
     static class Word implements Comparable<Word> {
         int offset;
