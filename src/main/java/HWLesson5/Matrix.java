@@ -1,5 +1,7 @@
 package HWLesson5;
 
+import java.util.Arrays;
+
 /**
  * Created by arina on 03.07.17.
  */
@@ -7,22 +9,19 @@ public class Matrix {
 
     public static int[] counter(int[][] matrix){
         int[] row = new int[matrix.length]; //массива для суммы чисел в каждом ряду
-        OUT: for (int i = 0; i < matrix.length ; i++) {
+        INNER: for (int i = 0; i < matrix.length ; i++) {
             for (int j = 0; j < matrix[i].length ; j++) {
                 if(matrix[i][j] > 0){
                     row[i] += matrix[i][j];
                 }
                 else{
                     row[i]= 0;
-                    continue OUT;
+                    continue INNER;
                 }
             }
         }
-        for (int i = 0; i <row.length ; i++) {
-            System.out.println(row[i]);
-        }
-        System.out.println();
 
+        System.out.println(Arrays.toString(row));
         return row;
     }
 
