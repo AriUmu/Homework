@@ -8,30 +8,28 @@ import java.util.Arrays;
 public class PrintArray {
     public static void main(String[] args) {
 
-        int a[] = {1,2,3,4,5};
-        int[] b = {};
-        byte[] c = {2,-3,4};
-        short[] s = {127, 56, 0};
-        double[] d = {123.5, 67.8754, 34.5677, 0,543, -34,3};
-        float[] f = {123.5f, 67.4f, 34.877f, 0, 543, -34,3};
+        int arrayA[] = {1,2,3,4,5};
+        int[] arrayB = {};
+        byte[] arrayC = {2,-3,4};
+        short[] arrayS = {127, 56, 0};
+        double[] arrayD = {123.5, 67.8754, 34.5677, 0,543, -34,3};
+        float[] arrayF = {123.5f, 67.4f, 34.877f, 0, 543, -34,3};
         String [] str = {"lol","kek", "cheburek"};
 
-        printArray(a);
-        printArray(b);
+        printArray(arrayA);
+        printArray(arrayB);
         printArray(str);
-        printArray(c);
-        printArray(s);
-        printArray(d);
-        printArray(f);
+        printArray(arrayC);
+        printArray(arrayS);
+        printArray(arrayD);
+        printArray(arrayF);
 
-
-        Arrays.toString(a);
     }
 
     public static String printArray (int[] o){
         System.out.print("[");
-        for (int i = 0; i <o.length ; i++) {
-            System.out.print(o[i] + " ");
+        for (int num : o) {
+            System.out.print(num + " ");
         }
         System.out.println("]");
         return "";
@@ -39,8 +37,8 @@ public class PrintArray {
 
     public static String printArray (char[] o){
         System.out.print("[");
-        for (int i = 0; i <o.length ; i++) {
-            System.out.print(o[i] + " ");
+        for (char num : o) {
+            System.out.print(num + " ");
         }
         System.out.println("]");
         return "";
@@ -49,8 +47,8 @@ public class PrintArray {
 
     public static String printArray (short[] o){
         System.out.print("[");
-        for (int i = 0; i <o.length ; i++) {
-            System.out.print(o[i] + " ");
+        for (short num : o) {
+            System.out.print(num + " ");
         }
         System.out.println("]");
         return "";
@@ -58,8 +56,8 @@ public class PrintArray {
 
     public static String printArray (byte[] o){
         System.out.print("[");
-        for (int i = 0; i <o.length ; i++) {
-            System.out.print(o[i] + " ");
+        for (byte num : o) {
+            System.out.print(num + " ");
         }
         System.out.println("]");
         return "";
@@ -67,16 +65,16 @@ public class PrintArray {
 
     public static String printArray (double[] o){
         System.out.print("[");
-        for (int i = 0; i <o.length ; i++) {
-            System.out.print(o[i] + " ");
+        for (double num : o) {
+            System.out.print(num + " ");
         }
         System.out.println("]");
         return "";
     }
     public static String printArray (float[] o){
         System.out.print("[");
-        for (int i = 0; i <o.length ; i++) {
-            System.out.print(o[i] + " ");
+        for (float num : o) {
+            System.out.print(num + " ");
         }
         System.out.println("]");
         return "";
