@@ -1,4 +1,4 @@
-package HWLesson1;
+package CodingBat;
 
 /**
  * Created by arina on 24.06.17.

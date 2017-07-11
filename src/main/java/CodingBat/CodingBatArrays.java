@@ -1,4 +1,4 @@
-package HWLesson5;
+package CodingBat;
 
 import java.util.Arrays;
 
