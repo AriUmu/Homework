@@ -1,6 +1,8 @@
 package HWLesson10;
 
-import javax.xml.bind.annotation.XmlType;
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
@@ -11,7 +13,7 @@ public class MyStack {
     private String[] elements;
     private int size = 0;
 
-    public static final int DEFAULT_MAXSIZE = 5;
+    public static final int DEFAULT_MAXSIZE = 10;
 
     public MyStack() {
         this(DEFAULT_MAXSIZE);
@@ -48,11 +50,12 @@ public class MyStack {
     }
 
     public String tos(){
-        return size <=0 ? null : elements[size-1];
+        return size <=0 ? null : elements[size];
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(Arrays.copyOfRange(elements,0,size));
+        return Arrays.toString(Arrays.copyOfRange(elements,1,size+1));
     }
+
 }

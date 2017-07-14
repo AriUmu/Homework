@@ -1,3 +1,5 @@
+package HWLesson10;
+
 /**
  * Created by arina on 13.07.17.
  */
