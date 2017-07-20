@@ -33,6 +33,36 @@ public class CBString3 {
         }
         return happy;
     }
+    public static String sameEnds(String string) {
+        String result = "";
+        int len = 0;
+        for(int i = 0; i < string.length()/2;i++){
+            if(string.length() == 3){
+                len = 2;
+            }
+            else if(string.length() == 2){
+                len = 2;
+            }
+            else {
+                len = string.length();
+            }
+            for(int j = string.length()/2; j < len; j++){
+
+                // if(string.charAt(0) != string.charAt(j)){
+                // result = "";
+                // }
+
+                if(string.charAt(i) == string.charAt(j)){
+                    result += string.charAt(i);
+                    i++;
+                }
+
+            }
+            return result;
+
+        }
+        return result;
+    }
 
 
 
@@ -40,5 +70,7 @@ public class CBString3 {
     public static void main(String[] args) {
         System.out.println(countYZ("fiz = = loy"));
         System.out.println(gHappy("pppggttgg"));
+
+        System.out.println(sameEnds("mymmy"));
     }
 }

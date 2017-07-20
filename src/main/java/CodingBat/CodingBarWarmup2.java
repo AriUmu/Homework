@@ -53,6 +53,41 @@ public class CodingBarWarmup2 {
 
     }
 
+    public static String stringBits(String str) {
+        String result = "";
+        for (int i=0; i<str.length(); i+=2) {
+            result = result + str.substring(i, i+1);
+        }
+        return result;
+    }
+    public static int arrayCount9(int[] nums) {
+        int count = 0;
+        for(int i : nums){
+            if(i == 9){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static int stringMatch(String a, String b) {
+        int count = 0;
+        int minLen = a.length();
+        if(a.length() > b.length()){
+            minLen = b.length();
+        }
+        for(int i = 0; i < minLen -1; i++){
+            if(a.substring(i, i+2).equals(b.substring(i, i+2))){
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+
+
+
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
@@ -61,6 +96,9 @@ public class CodingBarWarmup2 {
         System.out.println(doubleX("axxaa"));
         System.out.println(last2("tratata"));
         array123(arr);
+        System.out.println(stringBits("Hello"));
+        System.out.println(arrayCount9(arr));
+        System.out.println(stringMatch("ghjkld", "dfghjk"));
 
 
     }
