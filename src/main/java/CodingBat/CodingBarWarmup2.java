@@ -84,13 +84,53 @@ public class CodingBarWarmup2 {
         return count;
     }
 
+    public static int  countXX(String str) {
+        int count = 0;
+        for(int i = 0; i < str.length()-1; i++){
+            if(str.charAt(i) == 'x' && str.charAt(i + 1) == 'x'){
+                count ++;
+            }
+        }
+        return count;
+    }
+
+    public static String stringSplosion(String str) {
+        String result = "";
+        for (int i = 0; i < str.length(); i++){
+            result += str.charAt(i);
+            if(i < str.length() - 1){
+                result += str.substring(0, i+1);
+            }
+        }
+        return result;
+    }
+
+    public static boolean arrayFront9(int[] nums) {
+        for(int i = 0; i < nums.length; i++){
+            if(i < 4 && nums[i] == 9){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public  static String stringX(String str) {
+        StringBuilder result = new StringBuilder(str);
+        for(int i = 0; i < result.length() - 1; i++){
+            if (result.charAt(i) == 'x' && i != 0){
+                result = result.delete(i, i+1);
+                i--;
+            }
+        }
+        return result.toString();
+    }
 
 
 
 
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        int[] arr = {1, 2, 9, 4, 5, 6, 7};
 
         System.out.println(stringTimes("Hi", 5));
         System.out.println(doubleX("axxaa"));
@@ -99,6 +139,10 @@ public class CodingBarWarmup2 {
         System.out.println(stringBits("Hello"));
         System.out.println(arrayCount9(arr));
         System.out.println(stringMatch("ghjkld", "dfghjk"));
+        System.out.println(countXX("sdlkljaxx,n,kxx"));
+        System.out.println(stringSplosion("Code"));
+        System.out.println(arrayFront9(arr));
+        System.out.println(stringX("xabxxxcdx"));
 
 
     }
