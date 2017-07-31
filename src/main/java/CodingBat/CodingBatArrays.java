@@ -102,9 +102,80 @@ public class CodingBatArrays {   //Arrays -1
         return a;
     }
 
+    public static int[] plusTwo(int[] a, int[] b) {
+        int[] c = {a[0], a[1], b[0], b[1]};
+        return c;
+    }
+
+    public static int[] rotateLeft3(int[] nums) {
+        int[] array = new int[3];
+        array[0] = nums[1];
+        array[1] = nums[2];
+        array[2] = nums[0];
+        return array;
+    }
+
+    public static boolean unlucky1(int[] nums) {
+        boolean flag = false;
+        for(int i = 0; i < nums.length-1; i++){
+            if(nums[i] == 1 && nums[i+1] == 3 && (i <= 1 || i >= nums.length - 2)){
+                return !flag;
+            }
+        }
+        return flag;
+    }
+
+    public static int[] make2(int[] a, int[] b) {
+        int[] arr = new int[2];
+        if(a.length >= 2){
+            arr[0] = a[0];
+            arr[1] = a[1];
+
+        }
+        else if(a.length == 1){
+            arr[0] = a[0];
+            arr[1] = b[0];
+
+        }
+        else if(a.length == 0){
+            arr[0] = b[0];
+            arr[1] = b[1];
+        }
+        return arr;
+    }
+
+    public static int[] swapEnds(int[] nums) {
+        int num = nums[0];
+        nums[0] = nums[nums.length - 1];
+        nums[nums.length - 1] = num;
+        return nums;
+    }
+
+    public static int[] front11(int[] a, int[] b) {
+        int[] arr = new int[2];
+        int[] array = new int[1];
+        int[] ar = new int[0];
+        if(a.length > 0 && b.length > 0){
+            arr[0] = a[0];
+            arr[1] = b[0];
+            return arr;
+        }
+        else if (a.length > 0){
+            array[0] = a[0];
+            return  array;
+        }
+        else if (b.length > 0){
+            array[0] = b[0];
+            return  array;
+        }
+        return ar;
+    }
+
+
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3};
+        int[] nums1 = {1,1,3,4,5,1,1};
         int[] nums = {2, 3, 4, 5, 6, 7, 89, 6};
         int[] a = {2, 3, 46, 7, 89, 6};
         int[] b = {23, 3, 4, 5, 6, 7, 89, 9};
@@ -122,6 +193,10 @@ public class CodingBatArrays {   //Arrays -1
         System.out.println(Arrays.toString(makeLast(array)));
         System.out.println(double23(array));
         System.out.println(Arrays.toString(makeMiddle(nums)));
+        System.out.println(unlucky1(nums1));
+        System.out.println(make2(array, nums));
+        System.out.println(swapEnds(array));
+        System.out.println(front11(array, nums));
 
 
     }

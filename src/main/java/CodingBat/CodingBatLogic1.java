@@ -60,6 +60,29 @@ public class CodingBatLogic1 {
         return Math.max(a, b);
     }
 
+    public static int sortaSum(int a, int b) {
+        int sum = a + b;
+        if (sum >=10 && sum <= 19){
+            return 20;
+        }
+        return sum;
+    }
+    public static int teenSum(int a, int b) {
+        int sum = a + b;
+        if(sum >= 13 && sum <= 19){
+            if((a >=13 && a <= 19)||(b >=13 && b <= 19)){
+                return 19;
+            }
+            return sum;
+        }
+        else if ((a >=13 && a <= 19)||(b >=13 && b <= 19)){
+            return 19;
+        }
+        else return sum;
+    }
+
+
+
 
     public static void main(String[] args) {
         System.out.println(caughtSpeeding(65, true));
@@ -69,6 +92,8 @@ public class CodingBatLogic1 {
         System.out.println(twoAsOne(1, 2, 3));
         System.out.println(lastDigit(22, 33, 44));
         System.out.println(maxMod5(7, 8));
+        System.out.println(sortaSum(10,8));
+        System.out.println(teenSum(13,5));
 
     }
 }
