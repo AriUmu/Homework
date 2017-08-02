@@ -167,6 +167,51 @@ public class CBString3 {
         return result;
     }
 
+    public static boolean equalIsNot(String str) {
+        int is = 0;
+        int no = 0;
+
+        for(int i = 0; i < str.length()-1; i++){
+            if(str.substring(i,i+2).equals("is")){
+                is++;
+            }
+        }
+        for(int i = 0; i < str.length()-2; i++){
+            if(str.substring(i,i+3).equals("not")){
+                no++;
+            }
+        }
+        return is == no;
+    }
+
+
+    public static int sumDigits(String str) {
+        int sum = 0;
+        for(int i = 0; i < str.length(); i++){
+            if(Character.isDigit(str.charAt(i))){
+                sum += Integer.parseInt(String.valueOf(str.charAt(i)));
+            }
+        }
+        return sum;
+    }
+
+    public int maxBlock(String str) {
+        int sum = 0;
+        int max = 1;
+        for(int i = 1; i < str.length(); i++){
+            if(str.charAt(i-1) == str.charAt(i)){
+                sum++;
+            }
+            else {
+                if(sum > max){
+                    max = sum;
+                }
+                sum = 0;
+            }
+        }
+        return max;
+    }
+
 
 
 
@@ -185,7 +230,10 @@ public class CBString3 {
 //        System.out.println(countTriple("xxxttyyuuevb"));
 //
 //        System.out.println(mirrorEnds("xxYxx"));
-        System.out.println(notReplace("is mu is"));
+//        System.out.println(notReplace("is mu is"));
+
+//        System.out.println(equalIsNot("isisnotnot"));
+        System.out.println(sumDigits("1234dsfvksl"));
 
     }
 }

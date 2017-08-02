@@ -171,6 +171,87 @@ public class CodingBatArrays {   //Arrays -1
         return ar;
     }
 
+    public static boolean inOrder(int a, int b, int c, boolean bOk) {
+        if(bOk){
+            if(c > b){
+                return true;
+            }
+            else return false;
+        }
+        else {
+            if(c >= b && b >= a){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+
+    public static int redTicket(int a, int b, int c) {
+        if (a == 2 && b == 2 && c == 2)
+            return 10;
+        if ( a == b && b == c)
+            return 5;
+        if ( a != b && a != c)
+            return 1;
+        else
+            return 0;
+    }
+
+    public static String alarmClock(int day, boolean vacation) {
+        if(vacation){
+            if(day > 5 || day == 0){
+                return "off";
+            }
+            else {
+                return "10:00";
+            }
+        }
+        else {
+            if(day > 5 || day == 0){
+                return "10:00";
+            }
+            else {
+                return "7:00";
+            }
+        }
+    }
+
+    public static boolean specialEleven(int n) {
+        if ((n % 11 == 0) || ((n - 1) % 11 == 0)){
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if(!equalOk){
+            return (a < b && b < c);
+        }
+        else {
+            return (a <= b && b <= c);
+        }
+    }
+
+    public static int makeChocolate(int small, int big, int goal) {
+        int rem = goal % 5;
+        int multi = (goal - big * 5) / 5;
+        if (small + (big*5) < goal)
+            return -1;
+        else if (rem <= small && goal - big*5 > 4)
+            return (rem + 5 * multi);
+        else if (rem <= small)
+            return rem;
+        else
+            return -1;
+    }
+
+
+
+
+
+
 
 
     public static void main(String[] args) {
@@ -197,6 +278,9 @@ public class CodingBatArrays {   //Arrays -1
         System.out.println(make2(array, nums));
         System.out.println(swapEnds(array));
         System.out.println(front11(array, nums));
+        System.out.println(inOrder(2,3,4,true));
+        System.out.println(redTicket(2,2,2));
+        System.out.println(alarmClock(5, true));
 
 
     }
