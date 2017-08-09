@@ -212,6 +212,73 @@ public class CBString3 {
         return max;
     }
 
+    public static boolean endOther(String a, String b) {
+
+        String result = "";
+        int min = Math.min(a.length(), b.length());
+        for(int i = 0; i < min; i++){
+            if(a.toLowerCase().charAt(a.length()-i-1) != b.toLowerCase().charAt(b.length()-i - 1)){
+                System.out.println(a.substring(a.length()-i-1, a.length()-i));
+                System.out.println(b.substring(b.length()-i-1, b.length()-i));
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    public static String repeatFront(String str, int n) {
+        String result = "";
+        for(int i = 0; i < n; n--){
+            result += str.substring(0,n);
+        }
+        return result;
+    }
+
+    public static String plusOut(String str, String word) {
+        String result = "";
+        for (int i = 0; i < str.length()-word.length(); i++){
+            if(str.substring(i, i+1).equals(word.substring(0,1))){
+                if(str.substring(i, i + word.length()).equals(word)){
+                    i+= word.length()-1;
+                    result += word;
+                }
+                else{
+                    result += "+";
+                }
+            }
+            else{
+                result += "+";
+            }
+        }
+        if(str.substring(str.length()-word.length(), str.length()).equals(word)){
+            result += word;
+        }
+        else {
+            int ost = str.length() - result.length();
+            for(int i = 0; i < ost; i++){
+                result += "+";
+            }
+        }
+        return result;
+    }
+
+    public static boolean xyzThere(String str) {
+        for(int i = 0; i < str.length()-2; i++){
+            if(str.substring(i, i+3).equals("xyz")){
+                if( i > 0 && !str.substring(i-1, i).equals(".")){
+                    return true;
+                }
+                else if(i == 0){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+
 
 
 
@@ -233,7 +300,8 @@ public class CBString3 {
 //        System.out.println(notReplace("is mu is"));
 
 //        System.out.println(equalIsNot("isisnotnot"));
-        System.out.println(sumDigits("1234dsfvksl"));
+//        System.out.println(sumDigits("1234dsfvksl"));
+        System.out.println(endOther("AbC", "HiaBc"));
 
     }
 }

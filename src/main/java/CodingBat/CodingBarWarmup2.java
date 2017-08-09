@@ -132,17 +132,17 @@ public class CodingBarWarmup2 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 9, 4, 5, 6, 7};
 
-        System.out.println(stringTimes("Hi", 5));
-        System.out.println(doubleX("axxaa"));
-        System.out.println(last2("tratata"));
-        array123(arr);
-        System.out.println(stringBits("Hello"));
-        System.out.println(arrayCount9(arr));
-        System.out.println(stringMatch("ghjkld", "dfghjk"));
-        System.out.println(countXX("sdlkljaxx,n,kxx"));
-        System.out.println(stringSplosion("Code"));
-        System.out.println(arrayFront9(arr));
-        System.out.println(stringX("xabxxxcdx"));
+//        System.out.println(stringTimes("Hi", 5));
+//        System.out.println(doubleX("axxaa"));
+//        System.out.println(last2("tratata"));
+//        array123(arr);
+//        System.out.println(stringBits("Hello"));
+//        System.out.println(arrayCount9(arr));
+//        System.out.println(stringMatch("ghjkld", "dfghjk"));
+//        System.out.println(countXX("sdlkljaxx,n,kxx"));
+//        System.out.println(stringSplosion("Code"));
+//        System.out.println(arrayFront9(arr));
+//        System.out.println(stringX("xabxxxcdx"));
 
 
     }

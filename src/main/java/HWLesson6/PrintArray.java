@@ -14,7 +14,7 @@ public class PrintArray {
         short[] arrayS = {127, 56, 0};
         double[] arrayD = {123.5, 67.8754, 34.5677, 0,543, -34,3};
         float[] arrayF = {123.5f, 67.4f, 34.877f, 0, 543, -34,3};
-        String [] str = {"lol","kek", "cheburek"};
+        String [] str = {"hello","New", "World"};
 
         printArray(arrayA);
         printArray(arrayB);
