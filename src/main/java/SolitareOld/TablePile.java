@@ -40,21 +40,21 @@ class TablePile extends CardPile {
 
     }
 
-    public Card select(int count, int tx, int ty, Graphics g) { //метод селект в DiscartPile TadlePile дублируются
+    public Card select(int count, int tx, int ty, Graphics g) {
         if (isEmpty()) {
             return null;
         }
 
         int numberOfPile = count - 6;
 
-        int trololo = Solitare.tableau[count - 6].getSize() - 1;
-        System.out.println(trololo * 35 - (ty - Solitare.tableau[count - 6].y)); //если отризательная то нажата по последней карте
+        int coordCard = Solitare.tableau[count - 6].getSize() - 1;
+        System.out.println(coordCard * 35 - (ty - Solitare.tableau[count - 6].y)); //если отризательная то нажата по последней карте
 
         int numberOfCard = 0;
-        if (trololo * 35 - (ty - Solitare.tableau[count - 6].y) < 0) {
-            numberOfCard = trololo;
+        if (coordCard * 35 - (ty - Solitare.tableau[count - 6].y) < 0) {
+            numberOfCard = coordCard;
         }
-        if (trololo * 35 - (ty - Solitare.tableau[count - 6].y) > 0) {
+        if (coordCard * 35 - (ty - Solitare.tableau[count - 6].y) > 0) {
             numberOfCard = ((ty - Solitare.tableau[count - 6].y) / 35);
         }
 
@@ -66,15 +66,15 @@ class TablePile extends CardPile {
 
 
         int howCardInPile = Solitare.allPiles[count].getSize(); //сколько карт в данной колоде
-        Solitare.howMachToTake = howCardInPile - numberOfCard; //сколько карт нужно полодить к стек
+        Solitare.howMuchToTake = howCardInPile - numberOfCard; //сколько карт нужно полодить к стек
 
         Stack<Card> stack1 = new Stack<>();
-        for (int i = 0; i < Solitare.howMachToTake; i++) {
+        for (int i = 0; i < Solitare.howMuchToTake; i++) {
             stack1.push(Solitare.allPiles[count].pop()); //
         }
 
 
-        for (int i = 0; i < Solitare.howMachToTake; i++) { //в порябке обратной очереди кладем карты на место и подсвечиваем
+        for (int i = 0; i < Solitare.howMuchToTake; i++) { //в порябке обратной очереди кладем карты на место и подсвечиваем
             Solitare.allPiles[count].push(stack1.pop());
             Card peek = Solitare.allPiles[count].top();
 
@@ -113,12 +113,12 @@ class TablePile extends CardPile {
     @Override
     public void selectNewPlace(int tx, int ty, Graphics g, int num, int newNum) {
 
-        for (int i = 0; i < Solitare.howMachToTake; i++) {
+        for (int i = 0; i < Solitare.howMuchToTake; i++) {
             if (Solitare.allPiles[num].top().isFaceUp()) { //если карта рубашкой вверх
                 Solitare.stackofcard.push(Solitare.allPiles[num].pop());   //то кладем ее в стек
             }
         }
-        System.out.println("В стеке " + Solitare.howMachToTake + " карт");
+        System.out.println("В стеке " + Solitare.howMuchToTake + " карт");
 
         Card topCardBuffStack = Solitare.stackofcard.peek();
 

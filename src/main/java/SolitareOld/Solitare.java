@@ -50,13 +50,13 @@ public class Solitare extends Applet {
     int num; //номер колоды из всех
     int newNum; //номер выбранной колоды
     static Stack<Card> stackofcard = new Stack<>();
-    static int howMachToTake = 0; //количество карт
+    static int howMuchToTake = 0; //количество карт
 
 
 
     //  @Override
     public boolean mouseDown(Event evt, int x, int y) { //куда щелкнули мышкой
-        //Если стек пустой или num == newNum те записываем все в стек
+        //Если ни одна из карт не выбрана
         if (topCard == null) {
             for (int i = 0; i < 13; i++) {
                 if (allPiles[i].includes(x, y)) { // выбирается стопка
@@ -72,7 +72,7 @@ public class Solitare extends Applet {
                     newNum = i;
                     allPiles[i].selectNewPlace(x, y, getGraphics(), num, newNum);
                     topCard = null;
-                    newNum = 0; //обнуляем
+                    newNum = 0;
                     num = 0;
                 }
             }
