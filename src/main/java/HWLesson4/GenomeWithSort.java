@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class GenomeWithSort { //дз - доделать с помощью hashCode + CodingBat на логику и побитовые опрации
 
-    private static final int GENOME_SIZE = 20;
+    private static final int GENOME_SIZE = 100;
     private static final int WORD_SIZE = 3;
 
     static class Word implements Comparable<Word> {
@@ -46,14 +46,22 @@ public class GenomeWithSort { //дз - доделать с помощью hashCo
         byte[] code = GeneratCode.generate(GENOME_SIZE);
 
         List<Word> list = new ArrayList<Word>();
+        long start = System.nanoTime();  //1198469
+
 
         for (int i = 0; i < GENOME_SIZE - WORD_SIZE; i++) {
             list.add(new Word(code, i));
         }
+
         Collections.sort(list);
+        long finish = System.nanoTime();
+
+
         for (int i = 1; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
 
+
+        System.out.println("Time " + (finish - start));
     }
 }

@@ -8,8 +8,8 @@ import java.util.Map;
  * Created by arina on 04.07.17.
  */
 public class GenomeHashCode { //доделать
-    private static final int GENOME_SIZE = 20;
-    private static final int WORD_SIZE = 2;
+    private static final int GENOME_SIZE = 100;
+    private static final int WORD_SIZE = 3;
 
     /*
 
@@ -21,6 +21,8 @@ public class GenomeHashCode { //доделать
 
        Map<String, Integer> hashMap = new HashMap();
 
+
+        long start = System.nanoTime();
         for (int i = 0; i < GENOME_SIZE - WORD_SIZE; i++) {
             String word = "";
             for (int j = 0; j < WORD_SIZE ; j++) {
@@ -37,6 +39,8 @@ public class GenomeHashCode { //доделать
                 hashMap.put(word, 1);
             }
         }
+        long finish = System.nanoTime();
+        System.out.println("Time " + (finish - start)); //2087412
 
         //hashMap.forEach(K, V -> System.out.println(K + " " + V));
         Iterator<Map.Entry<String, Integer>> iterator = hashMap.entrySet().iterator();

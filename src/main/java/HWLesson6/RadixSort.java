@@ -8,22 +8,34 @@ import java.util.*;
 public class RadixSort {
 
     public static void main(String[] args) {
-        int[] num = {16, 45, 75, 90, 85, 2, 24, 66,23,23,3,26,44};
+        int[] num = new int[500];
+        random(num);
 
+       // System.out.println(Arrays.toString(num));
+       // System.out.println();
+
+        long start = System.nanoTime();
         radixsort(num);
-        radixSort1(num);
+        long finish = System.nanoTime();
+        System.out.println("Time RadixSort " + (finish - start)); //2539580
+
+        start = System.nanoTime();
+        Arrays.sort(num);
+        finish = System.nanoTime();
+
+        System.out.println("Time QuikSort " + (finish - start)); //490259
 
         System.out.println(Arrays.toString(num));
 
     }
 
 
-    public static int[] random(int[] a){
-        for(int num: a){
-            System.out.print(num =  (int)(Math.random()*1000));
-            System.out.print(" ");
+    public static int[] random(int[] arr){
+      Random r = new Random();
+        for (int i = 0; i < arr.length ; i++) {
+            arr[i] = r.nextInt(100);
         }
-        return a;
+      return arr;
     }
 
     public static Integer[] radixSort1(int[] array){ //движение побайтово
@@ -51,7 +63,7 @@ public class RadixSort {
         return b;
     }
 
-    public static void radixsort(int[] input) {
+    public static void radixsort(int[] input) {  //не моя
 
         List<Integer>[] buckets = new ArrayList[input.length];
         for (int i = 0; i < buckets.length; i++) {

@@ -33,9 +33,12 @@ public class Genome {
 
     public static void main(String[] args) {
 
-        byte[] code = GeneratCode.generate(30);
-
+        byte[] code = GeneratCode.generate(100);
+        long start = System.nanoTime();
         rework(code, 3);
+        long finish = System.nanoTime();
+        System.out.println();
+        System.out.println("Time " + (finish - start)); //713142
 
     }
 }
