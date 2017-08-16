@@ -1,8 +1,6 @@
 package HWLesson16Collections;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
 public class MyBinarySearch {
@@ -17,10 +15,10 @@ public class MyBinarySearch {
         Arrays.sort(a);
         System.out.println(Arrays.toString(a));
 
-        int num = 56;
+        int num = 10;
 
         System.out.println(binarySearch(a, num));
-        
+
     }
 
 
@@ -37,7 +35,7 @@ public class MyBinarySearch {
                 return mid;
 
             if(lo > hi){
-                System.out.println("Число не найдено. Возможный индекс числа " + (mid-1));
+                System.out.print("Число не найдено. Возможный индекс числа ");
                 return mid-1;
             }
 

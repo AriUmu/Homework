@@ -3,6 +3,9 @@ package HWLesson16Collections;
 import java.util.*;
 
 class UseCollections {
+
+    public static final int VALUE = 1_000_000;
+
     public static void main(String[] args) {
 
         List<A> linkedList = new LinkedList<>();
@@ -21,7 +24,7 @@ class UseCollections {
 
         TreeSet<A> treeSet = new TreeSet<>();
         start = System.nanoTime();
-        for (int i = 0; i < 1_000_000; i++) {
+        for (int i = 0; i < VALUE; i++) {
             treeSet.add(new A());
         }
         finish = System.nanoTime();
@@ -49,7 +52,7 @@ class UseCollections {
 
     private static void addTime(List<A> list) {
         long start = System.nanoTime();
-        for (int i = 0; i < 1_000_000; i++) {
+        for (int i = 0; i < VALUE; i++) {
             list.add(new A());
         }
         long finish = System.nanoTime();

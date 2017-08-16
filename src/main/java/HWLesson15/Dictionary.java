@@ -75,6 +75,7 @@ public class Dictionary<T, U> implements Iterable<Dictionary.Pair> {
     Если в таблицу не хватает места - расширить таблицу +
     Избавиться от повторного высчитывания хэш-кода  -
     banchmark - скорость выполнения от 1000 до 100_000 +
+    delete
      */
 
 
@@ -91,9 +92,6 @@ public class Dictionary<T, U> implements Iterable<Dictionary.Pair> {
 //            data[index] = list;
 //        }
 //        list.add();
-
-
-
 
         int index = hash(key); //вычисляем индекс пары
 
@@ -166,6 +164,12 @@ public class Dictionary<T, U> implements Iterable<Dictionary.Pair> {
             }
         }
         return null;
+    }
+
+    public void delete(T key){
+        Pair pair = getPair(key);
+        int index = hash(key);
+        data[index].remove(pair);
     }
 
 
