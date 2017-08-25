@@ -42,8 +42,6 @@ public class GenomeHashCode { //доделать
         long finish = System.nanoTime();
         System.out.println("Time " + (finish - start)); //2087412
 
-        //hashMap.forEach(K, V -> System.out.println(K + " " + V));
-        Iterator<Map.Entry<String, Integer>> iterator = hashMap.entrySet().iterator();
         System.out.println("Genome " + hashMap.entrySet() );
     }
 

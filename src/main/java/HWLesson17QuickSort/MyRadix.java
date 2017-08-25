@@ -14,7 +14,7 @@ public class MyRadix {
         Random r = new Random();
 
         for (int i = 0; i < MAX; i++) {
-            a[i] = r.nextInt(10000);
+            a[i] = r.nextInt(1000);
         }
 
         System.out.println(Arrays.toString(a));
@@ -27,9 +27,11 @@ public class MyRadix {
 
     private static void sortRadix(int[] a) {
         int[] aux = new int[a.length];
+
         for (int i = 0; i < a.length; i++) {
             aux[i] = a[i];
         }
+
 
         int max = 0;
         for (int i = 0; i < a.length; i++) {
