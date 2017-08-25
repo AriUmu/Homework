@@ -15,7 +15,7 @@ public class FriquencyAnalize {
 
 
     public static void main(String[] args) throws IOException {
-        String contents = new String(Files.readAllBytes(Paths.get("WarAndPease.txt")), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get("/Users/arina/Desktop/GitHub/HomeworkJavaCourse/Homework/src/main/java/WarAndPease.txt")), StandardCharsets.UTF_8);
         List<String> words = Arrays.asList(contents.split("[\\P{L}]+")); //слово
 
         long count = words.stream().distinct().count();
