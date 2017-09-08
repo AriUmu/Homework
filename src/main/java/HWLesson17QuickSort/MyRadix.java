@@ -17,6 +17,7 @@ public class MyRadix {
             a[i] = r.nextInt(1000);
         }
 
+
         System.out.println(Arrays.toString(a));
 
         sortRadix(a);
@@ -32,13 +33,13 @@ public class MyRadix {
             aux[i] = a[i];
         }
 
-
         int max = 0;
         for (int i = 0; i < a.length; i++) {
             if (a[i] > max) {
                 max = a[i];
             }
         }
+
 
         int count = 0;
         while (max > 0) {

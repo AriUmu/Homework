@@ -1,4 +1,4 @@
-package HWLesson27Lambda;
+package HWLesson27LambdaFriquencyAnalize;
 
 
 import java.io.IOException;
